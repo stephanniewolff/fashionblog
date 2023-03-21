@@ -28,7 +28,7 @@
                     <label class="form-check-label" for="remember">Remember me</label>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
-                <p class="text-center mt-3">Don't have an account? <a href="signup.html">Sign up</a></p>
+                <p class="text-center mt-3">Don't have an account? <a href="signup.php">Sign up</a></p>
             </form>
         </div>
     </div>

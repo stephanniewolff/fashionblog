@@ -93,15 +93,15 @@
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="link-secondary" href="signup.html">Sign Up</a>
+        <a class="link-secondary" href="signup.php">Sign Up</a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="#">My Fashion Blog</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" id="loginButton" href="login.html">Login</a>
-        <a class="btn btn-sm btn-outline-secondary" id="startWritingButton"href="newpost.html">Start Writing</a>
-        <a class="btn btn-sm btn-outline-secondary" id="outfitSubmit"href="outfitsubmit.html">Outfit Submit</a>
+        <a class="btn btn-sm btn-outline-secondary" id="loginButton" href="login.php">Login</a>
+        <a class="btn btn-sm btn-outline-secondary" id="startWritingButton"href="newpost.php">Start Writing</a>
+        <a class="btn btn-sm btn-outline-secondary" id="outfitSubmit"href="outfitsubmit.php">Outfit Submit</a>
       </div>
       
     </div>
@@ -148,7 +148,7 @@
           
         </div>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet asperiores reiciendis officia totam corrupti, amet tempore reprehenderit nostrum, assumenda vel dolores, iusto porro. Soluta autem pariatur laborum quae quis aliquam.</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="firstpost.html">Read More</a>
+        <a type="submit" class="btn btn-primary" id="readMoreButton" href="firstpost.php">Read More</a>
       </article>
 
       <article class="blog-post">
@@ -159,7 +159,7 @@
 
         </div>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste excepturi libero quas voluptate! Ea quas voluptates nobis. Iure earum animi necessitatibus quod tempora, neque voluptates, harum repellendus doloribus eaque sit!</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="secondpost.html">Read More</a>
+        <a type="submit" class="btn btn-primary" id="readMoreButton" href="secondpost.php">Read More</a>
       </article>
 
       <article class="blog-post">
@@ -169,7 +169,7 @@
           <img class="imgteste" src="./imagens/post3.jpg">
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officiis perspiciatis, ipsa velit nostrum enim esse provident incidunt nulla aperiam et assumenda quia a dignissimos, ipsam ratione eligendi at?</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="thirdpost.html">Read More</a>
+        <a type="submit" class="btn btn-primary" id="readMoreButton" href="thirdpost.php">Read More</a>
       </article>
 
       <article class="blog-post">
@@ -179,7 +179,7 @@
           <img class="imgteste" src="./imagens/post4.jpg">
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officiis perspiciatis, ipsa velit nostrum enim esse provident incidunt nulla aperiam et assumenda quia a dignissimos, ipsam ratione eligendi at?</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="fourthpost.html">Read More</a>
+        <a type="submit" class="btn btn-primary" id="readMoreButton" href="fourthpost.php">Read More</a>
       </article>
       <!--
       <nav class="blog-pagination" aria-label="Pagination">
@@ -193,7 +193,7 @@
       <div class="position-sticky" style="top: 2rem;">
         <h4 class="fst-italic">Outfit of The Day</h4>
         <p class="mb-0">Submit All your best outfits</p>
-        <a type="submit" class="btn btn-primary" id="submitLook" href="lookbook.html">Lookbook</a>
+        <a type="submit" class="btn btn-primary" id="submitLook" href="lookbook.php">Lookbook</a>
         <div class="p-4 mb-3 bg-light rounded">
           <img class="lookimg" src="imagens/look1.jpg">
           <img class="lookimg" src="imagens/look2.jpg">

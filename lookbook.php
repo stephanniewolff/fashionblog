@@ -156,7 +156,7 @@
         </div>
     </div>
     <div class="buttonContainer">
-        <a class="btn btn-sm btn-outline-secondary" id="homeButton" href="index.html">Back to home</a>
+        <a class="btn btn-sm btn-outline-secondary" id="homeButton" href="index.php">Back to home</a>
     </div>
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

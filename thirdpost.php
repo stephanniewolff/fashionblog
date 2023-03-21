@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Fourth Post</title>
+    <title>Third Post</title>
 
     <style>
     
@@ -52,13 +52,13 @@
 </head>
 <body>
     <div class="headerContainer">
-        <h2 class="blog-post-title mb-1">My fourth post</h2>
+        <h2 class="blog-post-title mb-1">My third post</h2>
         <p class="blog-post-meta"><a href="#">December 14, 2020 by </a><a href="#" id="authorName">Stephannie</a></p>
     </div>
     <article class="row">
 
         <div class="col-6" id="imgContainer">
-            <img class="imgTeste" src="./imagens/post4.jpg">
+            <img class="imgTeste" src="./imagens/post3.jpg">
         </div>
         <div class="col-6" id="textContainer">
             <p>
@@ -69,7 +69,7 @@
             </p>
         </div>
         <div class="buttonContainer">
-            <a class="btn btn-sm btn-outline-secondary" id="homeButton" href="index.html">Back to home</a>
+            <a class="btn btn-sm btn-outline-secondary" id="homeButton" href="index.php">Back to home</a>
         </div>
     </article>
 </body>
