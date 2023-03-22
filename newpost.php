@@ -1,3 +1,27 @@
+<?php
+
+$title = "Criação de Post";
+$action = 'savepost.php';
+$buttonValue = "Criar Publicação";
+$buttonClass = "btn-success";
+
+if (isset($_GET['id'])) {
+    require('selectppost.php');
+
+    if ($allPosts) {
+        $post = $allPosts[0];
+    } else {
+        echo "<div class='alert alert-danger'> Essa publicação não existe </div>";
+    }
+
+    $action = "update_post.php?id=" . $_GET['id'];
+    $buttonValue = "Atualizar Publicação";
+    $buttonClass = "btn-primary";
+    $title = "Editando Publicação";
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,32 +44,32 @@
     <div class="row justify-content-center">
         <div class="col-lg-6">
             <h1 class="text-center mb-4">New Blog Post</h1>
-            <form enctype="multipart/form-data">
+            <form enctype="multipart/form-data" action="savepost.php" method="POST">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" placeholder="Enter title" required>
+                    <input type="text" class="form-control" name="title" placeholder="Enter title" required>
                 </div>
                 <div class="form-group">
                     <label for="title">Date</label>
-                    <input type="date" class="form-control" id="date" placeholder="dd/mm/yyyy" required>
+                    <input type="date" class="form-control" name="date" placeholder="dd/mm/yyyy" required>
                 </div>
                 <div class="form-group">
                     <label for="title">Author</label>
-                    <input type="text" class="form-control" id="author" placeholder="Enter Name" required>
+                    <input type="text" class="form-control" name="author" placeholder="Enter Name" required>
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea class="form-control" id="content" rows="8" placeholder="Enter content" required></textarea>
+                    <textarea class="form-control" name="content" rows="8" placeholder="Enter content" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="title">Tags</label>
-                    <input type="text" class="form-control" id="tags" placeholder="#" required>
+                    <input type="text" class="form-control" name="tags" placeholder="#" required>
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
+                    <input type="file" class="form-control-file" name="image">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" <?php echo $buttonClass; ?> value="<?php echo $buttonValue; ?>">Submit</button>
             </form>
         </div>
     </div>

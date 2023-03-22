@@ -139,49 +139,37 @@
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
         Stephannie Wolff
       </h3>
+<?php
+      require('selectpost.php'); 
+                
+                foreach($allPosts as $post) {
+                    
+                    echo "
+                    <article class='blog-post'>
+                    <h2 class='blog-post-title mb-1'>{$post['username']}</h2>
+                    <p class='blog-post-meta'><a href='#'>{$post['date']}</a><a href='#' id='authorName'>Stephannie</a></p>  
+                    <div class='col-auto d-none d-lg-block'>
+                      <img class='imgteste' src='./imagens/post1.jpg'>
+                      
+                    </div>
+                    <p>{$post['text']}</p>
+                    <a type='submit' class='btn btn-primary' id='readMoreButton' href='firstpost.php'>Read More</a>
+                  </article>
+                             ";
+                }
 
-      <article class="blog-post">
-        <h2 class="blog-post-title mb-1">My first post</h2>
-        <p class="blog-post-meta"><a href="#">December 14, 2020 by </a><a href="#" id="authorName">Stephannie</a></p>  
+            ?>
+      <!--<article class="blog-post">
+        <h2 class="blog-post-title mb-1">{$post['username']}</h2>
+        <p class="blog-post-meta"><a href="#">{$post['date']}</a><a href="#" id="authorName">Stephannie</a></p>  
         <div class="col-auto d-none d-lg-block">
           <img class="imgteste" src="./imagens/post1.jpg">
           
         </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet asperiores reiciendis officia totam corrupti, amet tempore reprehenderit nostrum, assumenda vel dolores, iusto porro. Soluta autem pariatur laborum quae quis aliquam.</p>
+        <p>{$post['text']}</p>
         <a type="submit" class="btn btn-primary" id="readMoreButton" href="firstpost.php">Read More</a>
       </article>
 
-      <article class="blog-post">
-        <h2 class="blog-post-title mb-1">My second post</h2>
-        <p class="blog-post-meta"><a href="#">December 14, 2020 by </a><a href="#" id="authorName">Stephannie</a></p>  
-        <div class="col-auto d-none d-lg-block">
-          <img class="imgteste" src="./imagens/post2.jpg">
-
-        </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste excepturi libero quas voluptate! Ea quas voluptates nobis. Iure earum animi necessitatibus quod tempora, neque voluptates, harum repellendus doloribus eaque sit!</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="secondpost.php">Read More</a>
-      </article>
-
-      <article class="blog-post">
-        <h2 class="blog-post-title mb-1">My third post</h2>
-        <p class="blog-post-meta"><a href="#">December 14, 2020 by </a><a href="#" id="authorName">Stephannie</a></p>        
-        <div class="col-auto d-none d-lg-block">
-          <img class="imgteste" src="./imagens/post3.jpg">
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officiis perspiciatis, ipsa velit nostrum enim esse provident incidunt nulla aperiam et assumenda quia a dignissimos, ipsam ratione eligendi at?</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="thirdpost.php">Read More</a>
-      </article>
-
-      <article class="blog-post">
-        <h2 class="blog-post-title mb-1">My fourth post</h2>
-        <p class="blog-post-meta"><a href="#">December 14, 2020 by </a><a href="#" id="authorName">Stephannie</a></p>        
-        <div class="col-auto d-none d-lg-block">
-          <img class="imgteste" src="./imagens/post4.jpg">
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officiis perspiciatis, ipsa velit nostrum enim esse provident incidunt nulla aperiam et assumenda quia a dignissimos, ipsam ratione eligendi at?</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="fourthpost.php">Read More</a>
-      </article>
-      <!--
       <nav class="blog-pagination" aria-label="Pagination">
         <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
         <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
