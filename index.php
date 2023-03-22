@@ -113,14 +113,6 @@
       <a class="p-2 link-secondary" href="#">Opinions</a>
       <a class="p-2 link-secondary" href="#">Decor</a>
       <a class="p-2 link-secondary" href="#">LifeStyle</a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
-      <a class="p-2 link-secondary" href="#"></a>
     </nav>
   </div>
 </div>
@@ -147,9 +139,9 @@
                     echo "
                     <article class='blog-post'>
                     <h2 class='blog-post-title mb-1'>{$post['username']}</h2>
-                    <p class='blog-post-meta'><a href='#'>{$post['date']}</a><a href='#' id='authorName'>Stephannie</a></p>  
+                    <p class='blog-post-meta'><a href='#'>{$post['date']}</a><a href='#' id='authorName'> Stephannie</a></p>  
                     <div class='col-auto d-none d-lg-block'>
-                      <img class='imgteste' src='./imagens/post1.jpg'>
+                      <img class='imgteste' src={$post['image']}>
                       
                     </div>
                     <p>{$post['text']}</p>
@@ -159,17 +151,7 @@
                 }
 
             ?>
-      <!--<article class="blog-post">
-        <h2 class="blog-post-title mb-1">{$post['username']}</h2>
-        <p class="blog-post-meta"><a href="#">{$post['date']}</a><a href="#" id="authorName">Stephannie</a></p>  
-        <div class="col-auto d-none d-lg-block">
-          <img class="imgteste" src="./imagens/post1.jpg">
-          
-        </div>
-        <p>{$post['text']}</p>
-        <a type="submit" class="btn btn-primary" id="readMoreButton" href="firstpost.php">Read More</a>
-      </article>
-
+      <!--
       <nav class="blog-pagination" aria-label="Pagination">
         <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
         <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>

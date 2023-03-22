@@ -14,11 +14,12 @@ if (isset($_GET['id'])) {
         echo "<div class='alert alert-danger'> Essa publicação não existe </div>";
     }
 
-    $action = "update_post.php?id=" . $_GET['id'];
+    $action = "savepost.php?id=" . $_GET['id'];
     $buttonValue = "Atualizar Publicação";
     $buttonClass = "btn-primary";
     $title = "Editando Publicação";
 }
+
 
 
 ?>
