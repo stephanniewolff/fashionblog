@@ -51,11 +51,11 @@ if (isset($_GET['id'])) {
                     <input type="text" class="form-control" name="title" placeholder="Enter title" required>
                 </div>
                 <div class="form-group">
-                    <label for="title">Date</label>
+                    <label for="date">Date</label>
                     <input type="date" class="form-control" name="date" placeholder="dd/mm/yyyy" required>
                 </div>
                 <div class="form-group">
-                    <label for="title">Author</label>
+                    <label for="author">Author</label>
                     <input type="text" class="form-control" name="author" placeholder="Enter Name" required>
                 </div>
                 <div class="form-group">
@@ -63,7 +63,7 @@ if (isset($_GET['id'])) {
                     <textarea class="form-control" name="content" rows="8" placeholder="Enter content" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="title">Tags</label>
+                    <label for="tags">Tags</label>
                     <input type="text" class="form-control" name="tags" placeholder="#" required>
                 </div>
                 <div class="form-group">

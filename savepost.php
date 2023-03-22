@@ -5,7 +5,19 @@
         $title = $_POST['title'];
         $content = $_POST['content'];
         $date = $_POST['date'];
-        $image = $_POST['image'];
+        $filePath = '';
+
+        if (isset($FILES['image'])) {
+
+            $fileExplodedName = explode('.',$uploadedFile['name']);
+            $fileExtension = $fileExplodeName[count($fileExplodeName) -1];
+            $newName = md5(time());
+            $diretory = "upload/";
+            $filePath = $diretory . $newName . '.' . $fileExtension;
+
+            move_uploaded_file($FILES['image']['tmp_name'], $filePath );
+        }
+        
 
         $sql = "
             INSERT INTO
@@ -20,26 +32,11 @@
 
         if ($result) {
             echo "Dado salvo com sucesso";
+       
         } else {
-            echo "Deu Ruim papito";
+            echo "Você não veio por formulário então não vou fazer nada não";
         }
-    } else {
-        echo "Você não veio por formulário então não vou fazer nada não";
     }
-    $msg = false;
 
-if (isset($FILES['image'])) {
-    $extensao = strtolower(substr($FILES['image']['name'], -4));
-    $novo_nome = md5(time()) . $extensao;
-    $diretorio = "upload/";
 
-    move_uploaded_file($FILES['image']['tmp_name'], $diretorio.$novo_nome);
-    $sql_code = "INSERT INTO postsubmit (username, text, date, image) VALUES ($title', '$content', '$date', '$novo_nome')";
-    if($mysqli->query($sql_code)) {
-    $msg = "arquivo enviado com sucesso";}
-    else {
-    $msg = "falhou";
-
-    }
-}
 ?>

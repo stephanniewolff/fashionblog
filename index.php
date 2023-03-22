@@ -141,7 +141,7 @@
                     <h2 class='blog-post-title mb-1'>{$post['username']}</h2>
                     <p class='blog-post-meta'><a href='#'>{$post['date']}</a><a href='#' id='authorName'> Stephannie</a></p>  
                     <div class='col-auto d-none d-lg-block'>
-                      <img class='imgteste' src={$post['image']}>
+                      <img class='image' src={$post['image']}>
                       
                     </div>
                     <p>{$post['text']}</p>
