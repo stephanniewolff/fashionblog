@@ -1,3 +1,26 @@
+<?php
+
+$title = "Criação de Post";
+$action = 'saveoutfit.php';
+$buttonValue = "Criar Publicação";
+$buttonClass = "btn-success";
+
+if (isset($_GET['id'])) {
+    require('selectoutfit.php');
+
+    if ($allPosts) {
+        $post = $allPosts[0];
+    } else {
+        echo "<div class='alert alert-danger'> Essa publicação não existe </div>";
+    }
+
+    $action = "saveoutfit.php?id=" . $_GET['id'];
+    $buttonValue = "Atualizar Publicação";
+    $buttonClass = "btn-primary";
+    $title = "Editando Publicação";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,24 +43,24 @@
     <div class="row justify-content-center">
         <div class="col-lg-6">
             <h1 class="text-center mb-4">Submit your Look</h1>
-            <form enctype="multipart/form-data">
+            <form enctype="multipart/form-data" action="saveoutfit.php" method="POST">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" placeholder="Enter title" required>
+                    <input type="text" class="form-control" name="title" placeholder="Enter title" required>
                 </div>
                 <div class="form-group">
                     <label for="content">Look Description</label>
-                    <textarea class="form-control" id="content" rows="8" placeholder="Enter content" required></textarea>
+                    <textarea class="form-control" name="description" rows="8" placeholder="Enter content" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="title">Where to find</label>
-                    <input type="text" class="form-control" id="tags" placeholder="Link" required>
+                    <label for="tags">Where to find</label>
+                    <input type="text" class="form-control" name="tags" placeholder="Link" required>
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
+                    <input type="file" class="form-control-file" name="image">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary"<?php echo $buttonClass; ?> value="<?php echo $buttonValue; ?>">Submit</button>
             </form>
         </div>
     </div>

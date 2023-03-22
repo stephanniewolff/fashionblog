@@ -3,17 +3,15 @@
         require('include/connection.php');
 
         $title = $_POST['title'];
-        $content = $_POST['content'];
-        $date = $_POST['date'];
+        $description = $_POST['description'];
         $filePath = '';
-
 
         if (isset($_FILES['image'])) {
 
             $fileExplodeName = explode('.',$_FILES['image']['name']);
             $fileExtension = $fileExplodeName[count($fileExplodeName) -1];
             $newName = md5(time());
-            $diretory = "upload/";
+            $diretory = "uploadoutfit/";
             $filePath = $diretory . $newName . '.' . $fileExtension;
 
             move_uploaded_file($_FILES['image']['tmp_name'], $filePath );
@@ -22,10 +20,10 @@
 
         $sql = "
             INSERT INTO
-                postsubmit
-                (username, text, date, image)
+                outfitsubmit
+                (title, description, image)
             VALUES
-                ('$title', '$content', '$date', '$filePath')
+                ('$title', '$description', '$filePath')
         ";
 
         $query = $dbConnection->prepare($sql);
